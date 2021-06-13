@@ -1,0 +1,192 @@
+body {
+    background-color: #c6c6c6;
+}
+
+.container{
+   
+}
+
+.bod {
+    width: 100%;
+    background-color: white;
+}
+
+.bod1{
+	 background-color: white;
+}
+
+
+
+#nav1 {
+    background-color: #003a5a;
+    color:white;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:10px;
+}
+
+#navh1 {
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+#navh1 a{
+    color:white;
+    text-decoration:none;
+}
+
+#nav2 {
+    background-color: #064b71;
+    color: white;
+    text-transform: uppercase;
+    padding-bottom:0px;
+}
+
+#nav2 a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+#active {
+    border-bottom: 4px solid #f18825;
+}
+
+    #nav2 a:hover {
+        color: #f18825;
+        transition: 0.3s;
+    }
+
+footer {
+    color: white;
+	position:relative;
+    text-align: center;
+    background-color: #003a5a;
+  
+    padding:10px;
+}
+
+#linkt:hover{
+	color:black;
+	text-decoration:none;
+}
+
+#datec{
+	color: #c6c6c6;
+    padding-bottom: 5px;
+	font-size:10px;
+}
+
+a{
+color:black;
+}
+
+a:hover{
+text-decoration:none;
+color:black;
+}
+	
+
+.sec1,.sec2{
+    margin-top:20px;
+}
+
+.sec1 h2,.sec2 h2{
+    margin-bottom:20px;
+    margin-left:10px;
+}
+
+article h3{
+    margin-top:10px;
+    margin-bottom:10px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+#date {
+    position: absolute;
+    bottom: 0;
+    color: #c6c6c6;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #c6c6c6;
+    width: 80%;
+}
+
+article div {
+    margin-bottom: 150px;
+}
+
+label{
+    padding-top:10px;
+}
+
+label:nth-child(1){
+    margin-top:20px;
+}
+
+.b {
+    background-color: white;
+    border: 2px solid #f18825;
+    color: #f18825;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+    .b:hover {
+        transition: 0.3s;
+        color: white;
+        background-color: #f18825;
+    }
+
+    .b:active {
+        border: 2px solid #f18825;
+    }
+	
+
+
+
+input.error {
+    border:1px solid #99182c;
+}
+
+.fa-bars{
+color:#f18825;
+text-align:center;
+}
+
+label.error {
+    border-top:1px solid #99182c;
+    border-bottom:1px solid #99182c;
+    border-right:1px solid #99182c;    
+    color:black;
+    padding:1px 5px 1px 5px;
+    font-size:small;
+
+}
+
+#b1{
+border:0px;
+}
+
+#b1:hover{
+border:0px;
+}
+#b1:active{
+border:0px;
+}
+
+#datec{
+    color: #c6c6c6;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #c6c6c6;
+    width: 80%;
+}
+
+
+
+
+
+
+
+
+

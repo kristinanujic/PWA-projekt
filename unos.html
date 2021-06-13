@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<link rel="icon" href="icont.png">
+<meta htpp-equiv="Content-Type" content="text/html; charset=utf-8"/>
+ <script src="https://kit.fontawesome.com/58e2d96e1f.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    
+    <title>Novi clanak</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">    
+<link rel="stylesheet" href="stylesheet.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="bod">
+
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+            <header>
+                <nav class="navbar" id="nav1">
+                    <span class="navbar-brand mb-0 h1" id="navh1"><a href="index.php">Welt</a></span>
+                </nav>
+                <nav class="navbar navbar-expand-lg" id="nav2">
+                    <button style="margin-bottom:5px;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon" >
+  <img src="icon1.svg"/>
+</span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-item nav-link" href="index.php">Home </a>
+                           <a class="nav-item nav-link" href="wirt.php?id=wirtschaft" >Business</a>
+                            <a class="nav-item nav-link" href="wirt.php?id=kultur">Kultura</a>
+                            <a class="nav-item nav-link active" id="active" href="unos.php">Unos</a>
+						<a class="nav-item nav-link" href="administracija.php">Administracija</a>
+					   </div>
+                    </div>
+                </nav>
+            </header>
+
+            <div class="container">
+                <form action="skripta.php" name="unos" enctype="multipart/form-data" method="POST" >
+
+                    <label for="title">Naslov vijesti</label>
+                    <br />
+                    <input type="text" name="title" id="naslov">
+					
+
+                    <br /><br>
+                    <label for="about">Kratki sadržaj vijesti (do 50 znakova)</label>
+                    <br /> <textarea name="about" id="kratki" cols="30" rows="10"></textarea>
+					
+                    <br /><br>
+                    <label for="content">Sadržaj vijesti</label>
+                    <br /> <textarea name="content" id="sadrzaj" cols="30" rows="10"></textarea>
+
+                    <br /><br>
+                    <label for="category">Kategorija vijesti</label>
+
+                    <br />
+                    <select name="category">
+						<option value="no" disabled>Odaberite kategoriju</option>
+                        <option value="wirtschaft">Wirtschaft</option>
+                        <option value="kultur">Kultur</option>
+                    </select>
+					
+
+                    <br /><br>
+                   <label for="pphoto" class="label">Odaberite sliku</label><br>
+                        <input type="file" name="pphoto" id="pphoto">
+						
+
+                    <br />
+
+                    <label>
+                        Spremiti u arhivu:
+                        <br /> <input type="checkbox" name="archive" value="da">
+                        Da
+                    </label>
+
+                   
+                    <br />
+                    <button type="reset" value="Poništi" class="b">Poništi</button>
+                    <button type="submit" value="Prihvati" class="b">Prihvati</button>
+                </form>
+                    </div>
+
+                    <footer>
+                        <h1>WELT</h1>
+                    </footer>
+					
+					<script type="text/javascript"> 
+					$(function() {
+ 
+    $("form[name='unos']").validate({
+	
+	 errorElement: 'div',
+    errorPlacement: function (error, element) {
+        error.css({'margin-right':'20px','padding-bottom':'2px','color':'red'});
+        error.addClass("arrow")
+        error.insertAfter(element);
+    },
+      
+      rules: {
+        title: {
+        required: true,
+        minlength: 5,
+		maxlength: 100,
+        
+      },
+        about: {
+          required: true,
+          minlength: 10,
+		  maxlength:400,
+          
+        },
+        content:{
+          required: true,
+        
+        },
+		pphoto:{
+		required:true,
+		},
+		category:{
+		required:true,
+		},
+      },
+      
+      messages: {
+        title: {
+          required: "Naslov mora biti unesen!",
+          minlength: "Naslov mora imati najmanje 5 znakova!",
+		  maxlength:"Naslov ne smije biti duži od 100 znakova!",
+        },
+        about: {
+          required: "Kratki sadržaj mora biti unesen!",
+          minlength: "Kratki sadržaj mora imati najmanje 10 znakova!",
+		  maxlength: "Kratki sadržaj ne smije biti duži od 400 znakova!",
+        },
+		 content: {
+          required: "Sadržaj mora biti unesen!",
+        },
+		 pphoto: {
+          required: "Slika mora biti odabrana!",
+         
+        },
+		 category: {
+          required: "Morate odabrati kategoriju!",
+         
+        },
+     },
+      submitHandler: function(form) {
+        form.submit();
+      }
+    });
+  });
+				  </script>
+
+</div>
+</div>
+
+</body>
+</html>
